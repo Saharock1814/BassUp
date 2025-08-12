@@ -1,0 +1,232 @@
+/* 
+  Localizable.strings
+  BassUp
+  
+  Copyright © 2024 BassUp. All rights reserved.
+*/
+
+// MARK: - App General
+"app_name" = "BassUp";
+"app_tagline" = "Learn Bass Guitar";
+
+// MARK: - Tab Navigation
+"tab_learn" = "Learn";
+"tab_practice" = "Practice";
+"tab_theory" = "Theory";
+"tab_progress" = "Progress";
+"tab_profile" = "Profile";
+
+// MARK: - Authentication
+"auth_welcome_back" = "Welcome back!";
+"auth_create_account" = "Create your account";
+"auth_continue_bass_journey" = "Continue your bass journey";
+"auth_display_name" = "Display Name";
+"auth_display_name_placeholder" = "Enter your name";
+"auth_email" = "Email";
+"auth_email_placeholder" = "Enter your email";
+"auth_password" = "Password";
+"auth_password_placeholder" = "Enter your password";
+"auth_sign_in" = "Sign In";
+"auth_create_account_button" = "Create Account";
+"auth_already_have_account" = "Already have an account? Sign In";
+"auth_dont_have_account" = "Don't have an account? Sign Up";
+"auth_forgot_password" = "Forgot Password?";
+"auth_or_continue_with" = "Or continue with";
+"auth_reset_password" = "Reset Password";
+"auth_reset_password_description" = "Enter your email address and we'll send you a link to reset your password.";
+"auth_send_reset_link" = "Send Reset Link";
+"auth_cancel" = "Cancel";
+
+// MARK: - Learn View
+"learn_welcome_back" = "Welcome back!";
+"learn_continue_journey" = "Continue your bass journey";
+"learn_current_lesson" = "Current Lesson";
+"learn_continue" = "Continue";
+"learn_recommended" = "Recommended";
+"learn_start" = "Start";
+"learn_categories" = "Categories";
+"learn_recent_lessons" = "Recent Lessons";
+"learn_all_lessons" = "All Lessons";
+"learn_filter" = "Filter";
+"learn_xp_to_next_level" = "XP to next level";
+
+// MARK: - Practice View
+"practice_practice_time" = "Practice Time";
+"practice_improve_skills" = "Improve your skills";
+"practice_total_practice" = "Total Practice";
+"practice_day_streak" = "day streak";
+"practice_quick_start" = "Quick Start";
+"practice_start_practice" = "Start Practice";
+"practice_metronome" = "Metronome";
+"practice_current_session" = "Current Session";
+"practice_end_session" = "End Session";
+"practice_duration" = "Duration";
+"practice_accuracy" = "Accuracy";
+"practice_practice_tools" = "Practice Tools";
+"practice_keep_time" = "Keep time";
+"practice_tune_bass" = "Tune your bass";
+"practice_record_yourself" = "Record yourself";
+"practice_play_along" = "Play along";
+"practice_recommended" = "Recommended";
+"practice_all_exercises" = "All Exercises";
+"practice_recent_practice" = "Recent Practice";
+"practice_no_recent_activity" = "No recent activity";
+
+// MARK: - Theory View
+"theory_music_theory" = "Music Theory";
+"theory_master_fundamentals" = "Master the fundamentals";
+"theory_completed" = "Completed";
+"theory_complete" = "Complete";
+"theory_categories" = "Categories";
+"theory_featured" = "Featured";
+"theory_view_all" = "View All";
+"theory_all_topics" = "All Topics";
+"theory_topics" = "topics";
+"theory_examples" = "examples";
+"theory_exercises" = "exercises";
+"theory_learn" = "Learn";
+
+// MARK: - Progress View
+"progress_your_progress" = "Your Progress";
+"progress_track_journey" = "Track your learning journey";
+"progress_overview" = "Overview";
+"progress_total_practice" = "Total Practice";
+"progress_accuracy" = "Accuracy";
+"progress_streak" = "Streak";
+"progress_lessons" = "Lessons";
+"progress_practice_time" = "Practice Time";
+"progress_achievements" = "Achievements";
+"progress_unlocked" = "unlocked";
+"progress_no_achievements" = "No achievements yet";
+"progress_complete_lessons_message" = "Complete lessons and practice regularly to unlock achievements!";
+"progress_recent_activity" = "Recent Activity";
+"progress_no_recent_activity" = "No recent activity";
+"progress_goals" = "Goals";
+"progress_daily_practice" = "Daily Practice";
+"progress_practice_30_min" = "Practice for 30 minutes today";
+"progress_weekly_practice" = "Weekly Practice";
+"progress_practice_3_5_hours" = "Practice for 3.5 hours this week";
+"progress_lesson_completion" = "Lesson Completion";
+"progress_complete_5_lessons" = "Complete 5 lessons this month";
+
+// MARK: - Profile View
+"profile_profile" = "Profile";
+"profile_bass_player" = "Bass Player";
+"profile_premium_member" = "Premium Member";
+"profile_edit_profile" = "Edit Profile";
+"profile_quick_stats" = "Quick Stats";
+"profile_member_since" = "Member Since";
+"profile_last_login" = "Last Login";
+"profile_account" = "Account";
+"profile_premium_subscription" = "Premium Subscription";
+"profile_active" = "Active";
+"profile_upgrade_features" = "Upgrade for more features";
+"profile_change_password" = "Change Password";
+"profile_update_password" = "Update your password";
+"profile_privacy_settings" = "Privacy Settings";
+"profile_manage_privacy" = "Manage your privacy";
+"profile_export_data" = "Export Data";
+"profile_download_data" = "Download your data";
+"profile_app_settings" = "App Settings";
+"profile_settings" = "Settings";
+"profile_customize_experience" = "Customize your experience";
+"profile_notifications" = "Notifications";
+"profile_practice_reminders" = "Practice Reminders";
+"profile_sound_effects" = "Sound Effects";
+"profile_support_info" = "Support & Info";
+"profile_help_support" = "Help & Support";
+"profile_get_help" = "Get help and contact us";
+"profile_feedback" = "Feedback";
+"profile_share_thoughts" = "Share your thoughts";
+"profile_rate_app" = "Rate App";
+"profile_rate_app_store" = "Rate us on the App Store";
+"profile_about" = "About";
+"profile_app_version_info" = "App version and info";
+"profile_terms_service" = "Terms of Service";
+"profile_read_terms" = "Read our terms";
+"profile_privacy_policy" = "Privacy Policy";
+"profile_read_privacy" = "Read our privacy policy";
+
+// MARK: - Lesson Categories
+"category_basics" = "Basics";
+"category_technique" = "Technique";
+"category_theory" = "Theory";
+"category_scales" = "Scales";
+"category_chords" = "Chords";
+"category_rhythm" = "Rhythm";
+"category_songs" = "Songs";
+"category_advanced" = "Advanced";
+
+// MARK: - Theory Categories
+"theory_notation" = "Notation";
+"theory_rhythm" = "Rhythm";
+"theory_harmony" = "Harmony";
+"theory_melody" = "Melody";
+"theory_form" = "Form";
+"theory_ear_training" = "Ear Training";
+
+// MARK: - Difficulty Levels
+"difficulty_beginner" = "Beginner";
+"difficulty_intermediate" = "Intermediate";
+"difficulty_advanced" = "Advanced";
+"difficulty_expert" = "Expert";
+
+// MARK: - Common Actions
+"action_ok" = "OK";
+"action_cancel" = "Cancel";
+"action_done" = "Done";
+"action_save" = "Save";
+"action_delete" = "Delete";
+"action_edit" = "Edit";
+"action_close" = "Close";
+"action_back" = "Back";
+"action_next" = "Next";
+"action_previous" = "Previous";
+"action_play" = "Play";
+"action_pause" = "Pause";
+"action_stop" = "Stop";
+"action_record" = "Record";
+
+// MARK: - Time Units
+"time_minutes" = "minutes";
+"time_hours" = "hours";
+"time_days" = "days";
+"time_weeks" = "weeks";
+"time_months" = "months";
+"time_years" = "years";
+
+// MARK: - Status Messages
+"status_loading" = "Loading...";
+"status_saving" = "Saving...";
+"status_uploading" = "Uploading...";
+"status_downloading" = "Downloading...";
+"status_processing" = "Processing...";
+"status_completed" = "Completed";
+"status_failed" = "Failed";
+"status_success" = "Success";
+"status_error" = "Error";
+"status_unknown" = "Unknown";
+
+// MARK: - Error Messages
+"error_generic" = "Something went wrong. Please try again.";
+"error_network" = "Network error. Please check your connection.";
+"error_auth_failed" = "Authentication failed. Please check your credentials.";
+"error_invalid_email" = "Please enter a valid email address.";
+"error_weak_password" = "Password must be at least 6 characters long.";
+"error_email_in_use" = "This email is already in use.";
+"error_user_not_found" = "User not found.";
+"error_wrong_password" = "Incorrect password.";
+
+// MARK: - Success Messages
+"success_account_created" = "Account created successfully!";
+"success_password_reset" = "Password reset email sent!";
+"success_profile_updated" = "Profile updated successfully!";
+"success_lesson_completed" = "Lesson completed!";
+"success_achievement_unlocked" = "Achievement unlocked!";
+
+// MARK: - Placeholder Text
+"placeholder_search" = "Search...";
+"placeholder_enter_text" = "Enter text...";
+"placeholder_select_option" = "Select an option...";
+"placeholder_no_data" = "No data available";
+"placeholder_no_results" = "No results found";

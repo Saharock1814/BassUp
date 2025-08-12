@@ -1,0 +1,192 @@
+name: iOS CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.app
+      
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+        
+    - name: Install CocoaPods
+      run: |
+        sudo gem install cocoapods
+        pod --version
+        
+    - name: Install SwiftLint
+      run: |
+        brew install swiftlint
+        swiftlint version
+        
+    - name: Install dependencies
+      run: pod install
+      
+    - name: Run SwiftLint
+      run: swiftlint lint --config .swiftlint.yml
+      
+    - name: Run unit tests
+      run: |
+        xcodebuild test \
+          -workspace BassUp.xcworkspace \
+          -scheme BassUp \
+          -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' \
+          -enableCodeCoverage YES \
+          | xcpretty
+          
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results
+        path: |
+          ~/Library/Developer/Xcode/DerivedData/**/Logs/Test/*.xcresult
+          
+    - name: Generate coverage report
+      run: |
+        xcrun xccov view --report --files-for-target BassUp \
+          ~/Library/Developer/Xcode/DerivedData/**/Logs/Test/*.xcresult \
+          > coverage.txt
+          
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage.txt
+
+  build:
+    runs-on: macos-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.app
+      
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+        
+    - name: Install CocoaPods
+      run: sudo gem install cocoapods
+      
+    - name: Install dependencies
+      run: pod install
+      
+    - name: Build app
+      run: |
+        xcodebuild archive \
+          -workspace BassUp.xcworkspace \
+          -scheme BassUp \
+          -configuration Release \
+          -archivePath builds/BassUp.xcarchive \
+          -destination 'generic/platform=iOS'
+          
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-archive
+        path: builds/BassUp.xcarchive
+
+  deploy-beta:
+    runs-on: macos-latest
+    needs: build
+    if: github.ref == 'refs/heads/develop'
+    environment: beta
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.app
+      
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+        
+    - name: Install Fastlane
+      run: sudo gem install fastlane
+      
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: app-archive
+        path: builds/
+        
+    - name: Setup App Store Connect API
+      env:
+        APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+        APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+        APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+      run: |
+        mkdir -p ~/.appstoreconnect/private_keys
+        echo "$APP_STORE_CONNECT_API_KEY" > ~/.appstoreconnect/private_keys/AuthKey_$APP_STORE_CONNECT_API_KEY_ID.p8
+        
+    - name: Deploy to TestFlight
+      env:
+        FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+      run: fastlane beta
+
+  deploy-release:
+    runs-on: macos-latest
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    environment: production
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_15.0.app
+      
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+        
+    - name: Install Fastlane
+      run: sudo gem install fastlane
+      
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: app-archive
+        path: builds/
+        
+    - name: Setup App Store Connect API
+      env:
+        APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+        APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+        APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+      run: |
+        mkdir -p ~/.appstoreconnect/private_keys
+        echo "$APP_STORE_CONNECT_API_KEY" > ~/.appstoreconnect/private_keys/AuthKey_$APP_STORE_CONNECT_API_KEY_ID.p8
+        
+    - name: Deploy to App Store
+      env:
+        FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+      run: fastlane release

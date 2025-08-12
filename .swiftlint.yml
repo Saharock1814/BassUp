@@ -1,0 +1,219 @@
+# SwiftLint Configuration File
+# https://github.com/realm/SwiftLint
+
+# Disable all rules by default
+disabled_rules:
+  # - trailing_whitespace
+  # - line_length
+  # - function_body_length
+  # - type_body_length
+  # - file_length
+  # - cyclomatic_complexity
+
+# Enable specific rules
+opt_in_rules:
+  - array_init
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_range_nil_comparison
+  - empty_count
+  - empty_string
+  - enum_case_associated_values_count
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - last_where
+  - legacy_random
+  - literal_expression_end_indentation
+  - multiline_arguments
+  - multiline_function_chains
+  - multiline_literal_brackets
+  - multiline_parameters
+  - operator_usage_whitespace
+  - overridden_super_call
+  - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - sorted_first_last
+  - sorted_imports
+  - static_operator
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment_on_call
+  - yoda_condition
+
+# Exclude files
+excluded:
+  - Carthage
+  - Pods
+  - BassUpTests
+  - BassUpUITests
+  - Generated
+
+# Custom rules
+custom_rules:
+  # Custom rule for force unwrapping
+  no_force_unwrap:
+    name: "No Force Unwrap"
+    regex: '!'
+    message: "Avoid force unwrapping. Use optional binding or provide a default value."
+    severity: error
+
+# Rule configurations
+line_length:
+  warning: 120
+  error: 150
+  ignores_comments: true
+  ignores_urls: true
+  ignores_function_declarations: true
+  ignores_conditionally_compiled_code: true
+
+function_body_length:
+  warning: 50
+  error: 100
+
+type_body_length:
+  warning: 300
+  error: 500
+
+file_length:
+  warning: 500
+  error: 1000
+
+cyclomatic_complexity:
+  warning: 10
+  error: 20
+
+large_tuple:
+  warning: 3
+  error: 4
+
+function_parameter_count:
+  warning: 5
+  error: 8
+
+identifier_name:
+  min_length:
+    warning: 2
+    error: 1
+  max_length:
+    warning: 40
+    error: 50
+  excluded:
+    - id
+    - URL
+    - x
+    - y
+    - z
+
+type_name:
+  min_length:
+    warning: 3
+    error: 2
+  max_length:
+    warning: 40
+    error: 50
+
+variable_name:
+  min_length:
+    warning: 2
+    error: 1
+  max_length:
+    warning: 40
+    error: 50
+
+# Documentation rules
+missing_docs:
+  public: warning
+  internal: warning
+  private: warning
+
+# Import rules
+sorted_imports:
+  severity: warning
+
+# Trailing whitespace
+trailing_whitespace:
+  ignores_empty_lines: true
+  ignores_comments: true
+
+# Trailing newline
+trailing_newline:
+  severity: warning
+
+# File header
+file_header:
+  required_pattern: |
+                    \/\/
+                    \/\/  BassUp
+                    \/\/  Copyright © \d{4} BassUp\. All rights reserved\.
+                    \/\/
+
+# Colon spacing
+colon:
+  flexible_right_spacing: true
+
+# Comma spacing
+comma:
+  flexible_right_spacing: true
+
+# Operator spacing
+operator_usage_whitespace:
+  severity: warning
+
+# Return arrow spacing
+return_arrow_whitespace:
+  severity: warning
+
+# Semicolon spacing
+semicolon:
+  flexible_right_spacing: true
+
+# Vertical whitespace
+vertical_whitespace:
+  max_empty_lines: 1
+
+# Void return
+void_return:
+  severity: warning
+
+# Weak delegate
+weak_delegate:
+  severity: warning
+
+# XCTest specific rules
+xctfail_message:
+  severity: warning
+
+# SwiftUI specific rules
+swiftui_private_actions:
+  severity: warning
+
+# Performance rules
+discarded_notification_center_observer:
+  severity: warning
+
+unused_import:
+  severity: warning
+
+# Security rules
+force_cast:
+  severity: error
+
+force_try:
+  severity: error
+
+force_unwrapping:
+  severity: error
+
+# Accessibility rules
+accessibility_label_for_image:
+  severity: warning
+
+accessibility_trait_for_button:
+  severity: warning

@@ -1,0 +1,232 @@
+/* 
+  Localizable.strings (Russian)
+  BassUp
+  
+  Copyright © 2024 BassUp. All rights reserved.
+*/
+
+// MARK: - App General
+"app_name" = "BassUp";
+"app_tagline" = "Изучайте бас-гитару";
+
+// MARK: - Tab Navigation
+"tab_learn" = "Обучение";
+"tab_practice" = "Практика";
+"tab_theory" = "Теория";
+"tab_progress" = "Прогресс";
+"tab_profile" = "Профиль";
+
+// MARK: - Authentication
+"auth_welcome_back" = "С возвращением!";
+"auth_create_account" = "Создайте аккаунт";
+"auth_continue_bass_journey" = "Продолжайте изучение бас-гитары";
+"auth_display_name" = "Отображаемое имя";
+"auth_display_name_placeholder" = "Введите ваше имя";
+"auth_email" = "Email";
+"auth_email_placeholder" = "Введите ваш email";
+"auth_password" = "Пароль";
+"auth_password_placeholder" = "Введите ваш пароль";
+"auth_sign_in" = "Войти";
+"auth_create_account_button" = "Создать аккаунт";
+"auth_already_have_account" = "Уже есть аккаунт? Войти";
+"auth_dont_have_account" = "Нет аккаунта? Зарегистрироваться";
+"auth_forgot_password" = "Забыли пароль?";
+"auth_or_continue_with" = "Или продолжить с";
+"auth_reset_password" = "Сброс пароля";
+"auth_reset_password_description" = "Введите ваш email адрес, и мы отправим вам ссылку для сброса пароля.";
+"auth_send_reset_link" = "Отправить ссылку";
+"auth_cancel" = "Отмена";
+
+// MARK: - Learn View
+"learn_welcome_back" = "С возвращением!";
+"learn_continue_journey" = "Продолжайте изучение бас-гитары";
+"learn_current_lesson" = "Текущий урок";
+"learn_continue" = "Продолжить";
+"learn_recommended" = "Рекомендуемые";
+"learn_start" = "Начать";
+"learn_categories" = "Категории";
+"learn_recent_lessons" = "Недавние уроки";
+"learn_all_lessons" = "Все уроки";
+"learn_filter" = "Фильтр";
+"learn_xp_to_next_level" = "XP до следующего уровня";
+
+// MARK: - Practice View
+"practice_practice_time" = "Время практики";
+"practice_improve_skills" = "Улучшайте навыки";
+"practice_total_practice" = "Общее время практики";
+"practice_day_streak" = "дней подряд";
+"practice_quick_start" = "Быстрый старт";
+"practice_start_practice" = "Начать практику";
+"practice_metronome" = "Метроном";
+"practice_current_session" = "Текущая сессия";
+"practice_end_session" = "Завершить сессию";
+"practice_duration" = "Длительность";
+"practice_accuracy" = "Точность";
+"practice_practice_tools" = "Инструменты практики";
+"practice_keep_time" = "Держать ритм";
+"practice_tune_bass" = "Настроить бас";
+"practice_record_yourself" = "Записать себя";
+"practice_play_along" = "Играть под минус";
+"practice_recommended" = "Рекомендуемые";
+"practice_all_exercises" = "Все упражнения";
+"practice_recent_practice" = "Недавняя практика";
+"practice_no_recent_activity" = "Нет недавней активности";
+
+// MARK: - Theory View
+"theory_music_theory" = "Музыкальная теория";
+"theory_master_fundamentals" = "Освойте основы";
+"theory_completed" = "Завершено";
+"theory_complete" = "Завершить";
+"theory_categories" = "Категории";
+"theory_featured" = "Рекомендуемые";
+"theory_view_all" = "Посмотреть все";
+"theory_all_topics" = "Все темы";
+"theory_topics" = "тем";
+"theory_examples" = "примеров";
+"theory_exercises" = "упражнений";
+"theory_learn" = "Изучить";
+
+// MARK: - Progress View
+"progress_your_progress" = "Ваш прогресс";
+"progress_track_journey" = "Отслеживайте ваш путь обучения";
+"progress_overview" = "Обзор";
+"progress_total_practice" = "Общее время практики";
+"progress_accuracy" = "Точность";
+"progress_streak" = "Серия";
+"progress_lessons" = "Уроки";
+"progress_practice_time" = "Время практики";
+"progress_achievements" = "Достижения";
+"progress_unlocked" = "разблокировано";
+"progress_no_achievements" = "Пока нет достижений";
+"progress_complete_lessons_message" = "Завершайте уроки и регулярно практикуйтесь, чтобы разблокировать достижения!";
+"progress_recent_activity" = "Недавняя активность";
+"progress_no_recent_activity" = "Нет недавней активности";
+"progress_goals" = "Цели";
+"progress_daily_practice" = "Ежедневная практика";
+"progress_practice_30_min" = "Практикуйтесь 30 минут сегодня";
+"progress_weekly_practice" = "Еженедельная практика";
+"progress_practice_3_5_hours" = "Практикуйтесь 3.5 часа на этой неделе";
+"progress_lesson_completion" = "Завершение уроков";
+"progress_complete_5_lessons" = "Завершите 5 уроков в этом месяце";
+
+// MARK: - Profile View
+"profile_profile" = "Профиль";
+"profile_bass_player" = "Басист";
+"profile_premium_member" = "Премиум участник";
+"profile_edit_profile" = "Редактировать профиль";
+"profile_quick_stats" = "Быстрая статистика";
+"profile_member_since" = "Участник с";
+"profile_last_login" = "Последний вход";
+"profile_account" = "Аккаунт";
+"profile_premium_subscription" = "Премиум подписка";
+"profile_active" = "Активна";
+"profile_upgrade_features" = "Обновитесь для большего количества функций";
+"profile_change_password" = "Изменить пароль";
+"profile_update_password" = "Обновить пароль";
+"profile_privacy_settings" = "Настройки конфиденциальности";
+"profile_manage_privacy" = "Управлять конфиденциальностью";
+"profile_export_data" = "Экспорт данных";
+"profile_download_data" = "Скачать ваши данные";
+"profile_app_settings" = "Настройки приложения";
+"profile_settings" = "Настройки";
+"profile_customize_experience" = "Настроить опыт использования";
+"profile_notifications" = "Уведомления";
+"profile_practice_reminders" = "Напоминания о практике";
+"profile_sound_effects" = "Звуковые эффекты";
+"profile_support_info" = "Поддержка и информация";
+"profile_help_support" = "Помощь и поддержка";
+"profile_get_help" = "Получить помощь и связаться с нами";
+"profile_feedback" = "Обратная связь";
+"profile_share_thoughts" = "Поделитесь своими мыслями";
+"profile_rate_app" = "Оценить приложение";
+"profile_rate_app_store" = "Оцените нас в App Store";
+"profile_about" = "О приложении";
+"profile_app_version_info" = "Версия приложения и информация";
+"profile_terms_service" = "Условия использования";
+"profile_read_terms" = "Прочитать наши условия";
+"profile_privacy_policy" = "Политика конфиденциальности";
+"profile_read_privacy" = "Прочитать нашу политику конфиденциальности";
+
+// MARK: - Lesson Categories
+"category_basics" = "Основы";
+"category_technique" = "Техника";
+"category_theory" = "Теория";
+"category_scales" = "Гаммы";
+"category_chords" = "Аккорды";
+"category_rhythm" = "Ритм";
+"category_songs" = "Песни";
+"category_advanced" = "Продвинутый";
+
+// MARK: - Theory Categories
+"theory_notation" = "Нотная грамота";
+"theory_rhythm" = "Ритм";
+"theory_harmony" = "Гармония";
+"theory_melody" = "Мелодия";
+"theory_form" = "Форма";
+"theory_ear_training" = "Слуховое развитие";
+
+// MARK: - Difficulty Levels
+"difficulty_beginner" = "Начинающий";
+"difficulty_intermediate" = "Средний";
+"difficulty_advanced" = "Продвинутый";
+"difficulty_expert" = "Эксперт";
+
+// MARK: - Common Actions
+"action_ok" = "ОК";
+"action_cancel" = "Отмена";
+"action_done" = "Готово";
+"action_save" = "Сохранить";
+"action_delete" = "Удалить";
+"action_edit" = "Редактировать";
+"action_close" = "Закрыть";
+"action_back" = "Назад";
+"action_next" = "Далее";
+"action_previous" = "Предыдущий";
+"action_play" = "Играть";
+"action_pause" = "Пауза";
+"action_stop" = "Стоп";
+"action_record" = "Записать";
+
+// MARK: - Time Units
+"time_minutes" = "минут";
+"time_hours" = "часов";
+"time_days" = "дней";
+"time_weeks" = "недель";
+"time_months" = "месяцев";
+"time_years" = "лет";
+
+// MARK: - Status Messages
+"status_loading" = "Загрузка...";
+"status_saving" = "Сохранение...";
+"status_uploading" = "Загрузка...";
+"status_downloading" = "Скачивание...";
+"status_processing" = "Обработка...";
+"status_completed" = "Завершено";
+"status_failed" = "Ошибка";
+"status_success" = "Успешно";
+"status_error" = "Ошибка";
+"status_unknown" = "Неизвестно";
+
+// MARK: - Error Messages
+"error_generic" = "Что-то пошло не так. Попробуйте еще раз.";
+"error_network" = "Ошибка сети. Проверьте подключение.";
+"error_auth_failed" = "Ошибка аутентификации. Проверьте учетные данные.";
+"error_invalid_email" = "Пожалуйста, введите корректный email адрес.";
+"error_weak_password" = "Пароль должен содержать минимум 6 символов.";
+"error_email_in_use" = "Этот email уже используется.";
+"error_user_not_found" = "Пользователь не найден.";
+"error_wrong_password" = "Неверный пароль.";
+
+// MARK: - Success Messages
+"success_account_created" = "Аккаунт успешно создан!";
+"success_password_reset" = "Email для сброса пароля отправлен!";
+"success_profile_updated" = "Профиль успешно обновлен!";
+"success_lesson_completed" = "Урок завершен!";
+"success_achievement_unlocked" = "Достижение разблокировано!";
+
+// MARK: - Placeholder Text
+"placeholder_search" = "Поиск...";
+"placeholder_enter_text" = "Введите текст...";
+"placeholder_select_option" = "Выберите опцию...";
+"placeholder_no_data" = "Данные недоступны";
+"placeholder_no_results" = "Результаты не найдены";
