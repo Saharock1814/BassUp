@@ -106,9 +106,7 @@ def main() -> None:
         "and teams from scratch, led a QA team of up to 5 engineers, and delivered 650+ "
         "automated tests integrated into CI/CD. Strong in Python and TypeScript automation "
         "(Playwright, PyTest, Requests) and in using AI tools (Claude, Cursor, Playwright MCP) "
-        "to speed up test design and automation. Actively working with real-time media: "
-        "streaming pipelines and WebRTC (signaling, ICE/NAT traversal, media quality, "
-        "reconnect and network degradation scenarios).",
+        "to speed up test design and automation.",
     )
 
     section_title(pdf, "Skills")
@@ -117,12 +115,6 @@ def main() -> None:
             "Test automation: ",
             "Python, TypeScript, Playwright, PyTest, Selenium, Appium, "
             "Robot Framework, Requests",
-        ),
-        (
-            "Streaming & WebRTC: ",
-            "WebRTC (peer connection, SDP, ICE, TURN/STUN), live media streaming, "
-            "media quality and latency testing, network throttling / packet loss, "
-            "Chrome WebRTC internals",
         ),
         ("AI tools: ", "Claude, Cursor, Playwright MCP"),
         ("API & debugging: ", "Postman, Swagger, Charles, cURL, Chrome DevTools"),
@@ -150,8 +142,8 @@ def main() -> None:
         "Built the QA function from scratch: processes, test strategy, test plans, reporting standards, test cases and checklists for all projects",
         "Hiring and mentoring the QA team",
         "Leading testing of a smart city hardware/software system with deep LLM integration and a multi-service web platform, plus internal promo projects",
-        "Actively testing live video streaming and WebRTC-based real-time media: signaling flows, ICE candidates / TURN–STUN connectivity, audio/video quality under unstable networks, reconnect and failover scenarios",
-        "Designing and expanding automation coverage for streaming and WebRTC critical paths (connection setup, media negotiation, session recovery)",
+        "Active work with live streaming and WebRTC: signaling, ICE / TURN–STUN connectivity, media quality and latency under unstable networks, reconnect and failover scenarios",
+        "Expanding automation for streaming and WebRTC critical paths (connection setup, media negotiation, session recovery)",
         "Grew the automation suite to 150+ tests in under a year and expanding it actively",
     ]:
         bullet(pdf, b)
